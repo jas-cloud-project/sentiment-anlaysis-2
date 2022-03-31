@@ -20,7 +20,7 @@ Routes
 
 @app.route('/', methods=['GET','POST'])
 def index():
-    if request.method == 'POST':
+    if request.method == 'GET':
         try:
             input_review = str(request.form.get("review"))
         except requests.exceptions.ConnectionError:
